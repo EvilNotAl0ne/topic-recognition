@@ -22,6 +22,7 @@ def count_words(words: list[str]) -> dict:
 
 def get_top_words(counter: dict, limit: int = 10) -> tuple[tuple]:
     def by_value(item):
+        #Use word frequency
         return item[1]
 
     sorted_words = sorted(counter.items(), key=by_value, reverse=True)
